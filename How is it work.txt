@@ -1,0 +1,11 @@
+This program is designed for convenient work with CSV files. And for a specific task.
+
+***Task***: creating a new file which will contain some data from the client's file and half of the data from the file 
+exported from the site.
+
+***Required data***: files must be in the same format as stored in the main folder.
+
+***Description***: two files are compared by barcode. If the barcodes converge, then a new file is written, 
+where the price, discount and dates are taken from the client's file. Barcode, special product code and name are taken 
+from the website file.
+
