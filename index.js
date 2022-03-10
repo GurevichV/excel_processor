@@ -35,6 +35,30 @@ for (let itemC of dataFromClientJson) {
     }
 }
 
+// Method 2 (without nested loops)
+// let barCode = 'דגם';
+// const dataFromSiteJsonAsMap = new Map();
+
+// dataFromSiteJson.forEach(data => {
+//     dataFromSiteJsonAsMap.set(data[barCode], data)
+// })
+
+// dataFromClientJson.forEach(e => {
+//     if (dataFromSiteJsonAsMap.has(e[barCode])) {
+//         const elementForUpdate = {
+//             ...dataFromSiteJsonAsMap.get(e[barCode])
+//         };
+//         elementForUpdate['מחיר'] = e['מחיר'];
+//         elementForUpdate['הנחה'] = e['הנחה'];
+//         elementForUpdate['תאריך התחלה'] = e['תאריך התחלה'];
+//         elementForUpdate['תאריך סיום'] = e['תאריך סיום'];
+
+//         dataFromSiteJsonAsMap.set(elementForUpdate[barCode], elementForUpdate);
+//     }
+// })
+
+// let newData = Array.from(dataFromSiteJsonAsMap.values());
+
 // Write CSV file
 const csvWriter = createCsvWriter({
     path: 'main/newfile.csv',
